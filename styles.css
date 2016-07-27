@@ -222,7 +222,6 @@ body {
   width: 128px;
   height: 128px;
   position: absolute;
-  -webkit-animation: trackAnimation 2s linear infinite;
 }
 
 .ruby {
