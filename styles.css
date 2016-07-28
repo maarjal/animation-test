@@ -94,7 +94,7 @@ body {
 .burger-bite1, .burger-bite2, .burger-bite3, .burger-bite4, .burger-bite5, .burger-bite6 {
   position: absolute;
   border-radius: 50%;
-  background-color: darkblue;
+  background-color: beige;
   opacity: 0;
 }
 
@@ -313,7 +313,7 @@ body {
 }
 
 /*thermometer animation*/
-.thermometer1, .thermometer2 {
+/*.thermometer1, .thermometer2 {
   position: absolute;
   width: 100px;
   height: 200px;
@@ -338,4 +338,97 @@ body {
 
 @keyframes thermometer2Animation {
   100% { opacity: 0; }
+}*/
+
+/*sleep animation new*/
+.sleep-animation {
+  width: 830px;
+  height: 405px;
+  position: relative;
+}
+
+.couch {
+  width: 100%;
+  height: auto;
+}
+
+.napper {
+  width: 830px;
+  height: 405px;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+}
+
+.arm {
+  width: 830px;
+  height: 405px;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  -webkit-animation: sleeping 2.5s linear infinite;
+  -webkit-transform-origin: 50% 50% 100;
+  transform-origin: 50% 50% 100;
+}
+
+/*@keyframes sleeping {
+  50% { -webkit-transform: rotate(-1deg);}
+  100% { -webkit-transform: rotate(-2deg);}
+}*/
+
+@keyframes sleeping {
+  25% { -webkit-transform: rotate(1deg);}
+  50% { -webkit-transform: rotate(1deg);}
+  75% { -webkit-transform: rotate(-1deg);}
+  100% { -webkit-transform: rotate(-1deg);}
+}
+
+/*thermometer animation new*/
+.thermometer {
+  width: 944px;
+  height: 472px;
+  position: relative;
+}
+
+.thermometer-base {
+  width: 100%;
+  height: auto;
+}
+
+.temp1 {
+  width: 944px;
+  height: 472px;
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  -webkit-animation: thermometerHigher 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.temp2 {
+  width: 944px;
+  height: 472px;
+  position: absolute;
+  top: -10%;
+  left: 0%;
+  -webkit-animation: thermometerLower 2s linear infinite;
+  animation-delay: 1s;
+}
+
+.thermometer-lines {
+  width: 944px;
+  height: 472px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes thermometerLower {
+  50% { top: -5%; }
+  100% { top: 0%; }
+}
+
+@keyframes thermometerHigher {
+  50% { top: 5%; }
+  100% { top: 0%; }
 }
