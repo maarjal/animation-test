@@ -1,7 +1,7 @@
 /*=============== ANIMATIONS ===============*/
 
 body {
-  background: darkblue;
+  background: beige;
 }
 
 /*=============== TOILET ANIMATION ===============*/
@@ -282,4 +282,60 @@ body {
   50% { left: 7.5%; }
   100% { left: 7.5%; }
   0% { left: 55.5%; }
+}
+
+/*sleep animation*/
+.sleep1, .sleep2, .sleep3 {
+  width: 267px;
+  height: 305;
+  opacity: 0;
+}
+
+.sleep1 {
+  -webkit-animation: sleepAnimation 6s linear infinite;
+}
+
+.sleep2 {
+  -webkit-animation: sleepAnimation 6s linear infinite;
+  animation-delay: 2s;
+}
+
+.sleep3 {
+  -webkit-animation: sleepAnimation 6s linear infinite;
+  animation-delay: 4s;
+}
+
+@keyframes sleepAnimation {
+  20% { opacity: 0.3; }
+  40% { opacity: 0.5; }
+  60% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+/*thermometer animation*/
+.thermometer1, .thermometer2 {
+  position: absolute;
+  width: 100px;
+  height: 200px;
+}
+
+.thermometer1 img, .thermometer2 img {
+  width: 100%;
+}
+
+.thermometer1 {
+  opacity: 0;
+  -webkit-animation: thermometer1Animation 3s linear infinite;
+}
+
+.thermometer2 {
+  -webkit-animation: thermometer2Animation 3s linear infinite;
+}
+
+@keyframes thermometer1Animation {
+  100% { opacity: 1; }
+}
+
+@keyframes thermometer2Animation {
+  100% { opacity: 0; }
 }
